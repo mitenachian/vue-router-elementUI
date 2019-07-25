@@ -1,23 +1,23 @@
 module.exports = [{
-    name: '關於我',
+    name: '基本',
     id: 'basic',
     icon: 'flag',
     sub: [{
-      name: '1-1',
+      name: 'Basic1',
       componentName: 'Basic1'
     }, {
-      name: '1-2',
+      name: 'Basic2',
       componentName: 'Basic2'
     }]
   }, {
-    name: '相關作品',
+    name: '產品',
     id: 'products',
     icon: 'beer',
     sub: [{
-      name: '2-1',
+      name: 'Prd1',
       componentName: 'Prd1'
     }, {
-      name: '2-2',
+      name: 'Prd2',
       componentName: 'Prd2'
     }]
   }, {
@@ -25,10 +25,10 @@ module.exports = [{
     id: 'other',
     icon: 'star',
     sub: [{
-      name: '3-1',
+      name: 'Other1',
       componentName: 'Other1'
     }, {
-      name: '3-2',
+      name: 'Other2',
       componentName: 'Other2'
     }]
   }]

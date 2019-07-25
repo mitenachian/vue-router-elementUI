@@ -12,16 +12,17 @@
           <router-view></router-view>
           <!-- Router 來來去去-->
           <el-row>
-            <pre>routerFrom =>{{ routerFrom.path }}</pre>
+            <pre>routerFrom => routerTo</pre>
           </el-row>
           <el-row>
-            <pre>routerTo =>{{ routerTo.path }}</pre>
+            <pre> {{ routerFrom.path }} => {{ routerTo.path }}</pre>
           </el-row>
-          <el-row>
+          <el-row v-if="routerTo">
             <el-button @click="goback">回上頁</el-button>
             <el-button @click="goHome">回到根目錄</el-button>
             <el-button @click="goReplace">Replace</el-button>
           </el-row>
+          <!-- Router 來來去去-->
         </el-main>
       </el-container>
     </el-container>
@@ -33,15 +34,15 @@ import NavMenu from '@/components/NavMenu';
 import Header from '@/components/Header'
 export default {
   name: 'app',
+  components: {
+    'navmenu': NavMenu,
+    'vheader': Header
+  },
   data() {
     return {
       routerTo: '',
       routerFrom: '',
     }
-  },
-  components: {
-    'navmenu': NavMenu,
-    'vheader': Header
   },
   watch: {
     '$route' (to, from) {
