@@ -4,7 +4,19 @@ import menus from '@/config/menu-config'
 
 Vue.use(Router)
 
-var routes = []
+var routes = [
+  {
+		path: '/signin',
+		name: 'signin',
+		component: () => import('@/components/Login.vue'),
+		hidden: true,
+	},
+	{
+    path: '/',
+    name: 'Home',
+		component: () => import('@/components/Layout/index.vue'),
+	},
+]
 
 menus.forEach((item) => {
   item.sub.forEach((sub) => {

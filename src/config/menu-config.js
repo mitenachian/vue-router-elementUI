@@ -3,11 +3,13 @@ module.exports = [{
     id: 'basic',
     icon: 'flag',
     sub: [{
-      name: 'Basic1',
-      componentName: 'Basic1'
+      name: 'CheckPassword',
+      componentName: 'CheckPassword',
+      icon: 'comment',
     }, {
-      name: 'Basic2',
-      componentName: 'Basic2'
+      name: 'JSON Render',
+      componentName: 'JsonLoad',
+      icon: 'user',
     }]
   }, {
     name: '產品',
@@ -15,10 +17,12 @@ module.exports = [{
     icon: 'beer',
     sub: [{
       name: 'Prd1',
-      componentName: 'Prd1'
+      componentName: 'Prd1',
+      icon: 'coffee',
     }, {
       name: 'Prd2',
-      componentName: 'Prd2'
+      componentName: 'Prd2',
+      icon: 'coffee',
     }]
   }, {
     name: '其他',
@@ -26,9 +30,11 @@ module.exports = [{
     icon: 'star',
     sub: [{
       name: 'Other1',
-      componentName: 'Other1'
+      componentName: 'Other1',
+      icon: 'share',
     }, {
       name: 'Other2',
-      componentName: 'Other2'
+      componentName: 'Other2',
+      icon: 'edit',
     }]
   }]

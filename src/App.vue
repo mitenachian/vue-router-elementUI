@@ -4,7 +4,7 @@
       <el-header  class="header">
          <vheader />
       </el-header>
-      <el-container>
+      <el-container  :style="height">
         <el-aside width="200px">
           <navmenu></navmenu>
         </el-aside>
@@ -12,12 +12,11 @@
           <router-view></router-view>
           <!-- Router 來來去去-->
           <el-row>
-            <pre>routerFrom => routerTo</pre>
-          </el-row>
-          <el-row>
-            <pre> {{ routerFrom.path }} => {{ routerTo.path }}</pre>
-          </el-row>
-          <el-row v-if="routerTo">
+            <p> 
+                {{ routerFrom.path }}(routerFrom) 
+                <icon name="arrow-right"></icon> 
+                {{ routerTo.path }}(routerTo)
+            </p>
             <el-button @click="goback">回上頁</el-button>
             <el-button @click="goHome">回到根目錄</el-button>
             <el-button @click="goReplace">Replace</el-button>
@@ -25,13 +24,14 @@
           <!-- Router 來來去去-->
         </el-main>
       </el-container>
+      <el-footer>Practice only © 2019 Mitena</el-footer>
     </el-container>
   </div>
 </template>
 
 <script>
-import NavMenu from '@/components/NavMenu';
-import Header from '@/components/Header'
+import NavMenu from '@/components/Layout/NavMenu';
+import Header from '@/components/Layout/Header'
 export default {
   name: 'app',
   components: {
@@ -42,8 +42,13 @@ export default {
     return {
       routerTo: '',
       routerFrom: '',
+      height: {
+        height: window.innerHeight - 120 + 'px'
+      }
     }
+    
   },
+  // 查看router變化
   watch: {
     '$route' (to, from) {
       this.routerTo = to;
@@ -51,7 +56,6 @@ export default {
     }
   },
   methods: {
-    
     // 直接調用方法即可 
     goback(){
       // 上一頁
@@ -107,8 +111,21 @@ export default {
 
 <style>
 .header {
-  background-color: rgb(84, 92, 100);
+  background-color: #545c64;
   color: #fff;
   line-height: 60px;
 }
+.el-footer {
+    background-color: #B3C0D1;
+    color: #333;
+    line-height: 60px;
+  }
+.el-aside {
+  background-color: #545c64;
+    color: #333;
+    line-height: 200px;
+  }
+  .el-main {
+    color: #333;
+  }
 </style>

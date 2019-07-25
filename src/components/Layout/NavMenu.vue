@@ -1,8 +1,7 @@
 <template>
-  <el-row class="tac">
-    <el-col :span="24">
+	<div>
       <el-menu
-      class="el-menu-vertical-demo"
+      class=""
       router
       @open="handleOpen"
       @close="handleClose"
@@ -18,14 +17,15 @@
                 
             </template>
             <el-menu-item-group class="over-hide" v-for="sub in item.sub" :key="sub.componentName">
-                <el-menu-item :index="sub.componentName" v-text="sub.name">
+                <el-menu-item :index="sub.componentName">
+                  <icon :name="sub.icon"></icon>
+                  {{ sub.name }}
                 </el-menu-item>
             </el-menu-item-group>
         </el-submenu>
 
-      </el-menu>
-    </el-col>
-  </el-row>
+      </el-menu>	
+  </div>
 </template>
 
 <script>
@@ -48,6 +48,10 @@
 </script>
 <style scoped>
   .over-hide{
-    overflow: hidden;
+    overflow: hidden;  
   }
+  .el-menu{
+    border:0;
+  }
+  
 </style>
