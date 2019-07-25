@@ -10,16 +10,16 @@
         </el-aside>
         <el-main>
           <router-view></router-view>
+          <!-- Router 來來去去-->
           <el-row>
-            <h3> router From Path</h3>
-            <pre>{{ routerFrom.path }}</pre>
+            <pre>routerFrom =>{{ routerFrom.path }}</pre>
           </el-row>
           <el-row>
-            <h3> router To Path</h3>
-            <pre>{{ routerTo.path }}</pre>
+            <pre>routerTo =>{{ routerTo.path }}</pre>
           </el-row>
           <el-row>
-            <el-button @click="goback">Go Back</el-button>
+            <el-button @click="goback">回上頁</el-button>
+            <el-button @click="goHome">回到根目錄</el-button>
           </el-row>
         </el-main>
       </el-container>
@@ -54,10 +54,36 @@ export default {
     goback(){
       // 上一頁
       this.$router.back()
+     // 或是 this.$router.go(-1)
+    },
+    goHome(){
+      this.$router.push('/')
+      // 透過此方法，可以直接跳轉到根目錄
     },
   }
 }
+/*
+router.push( location )跳轉至指定頁面。
 
+使用方式：
+// 情境： 登入成功後跳轉頁面
+// 來到一個登入頁面組件Login.vue
+// template中的登入按鈕
+<button @click="login">login</button>
+// script
+export default {
+  methods: {
+    login(){
+      this.$http.post(api, this.user)
+        .then( ({data}) => {
+          // 以上都不是重點，重點在此
+          this.$router.push('/')
+          // 透過此方法，可以直接跳轉到根目錄
+        })
+    }
+  }
+}
+*/
 </script>
 
 <style>
