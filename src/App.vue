@@ -20,6 +20,7 @@
           <el-row>
             <el-button @click="goback">回上頁</el-button>
             <el-button @click="goHome">回到根目錄</el-button>
+            <el-button @click="goReplace">Replace</el-button>
           </el-row>
         </el-main>
       </el-container>
@@ -60,11 +61,14 @@ export default {
       this.$router.push('/')
       // 透過此方法，可以直接跳轉到根目錄
     },
+    goReplace(){
+     this.$router.replace('/')
+      // 透過此方法，可以直接跳轉到根目錄
+    },
   }
 }
 /*
 router.push( location )跳轉至指定頁面。
-
 使用方式：
 // 情境： 登入成功後跳轉頁面
 // 來到一個登入頁面組件Login.vue
@@ -80,6 +84,20 @@ export default {
           this.$router.push('/')
           // 透過此方法，可以直接跳轉到根目錄
         })
+    }
+  }
+}
+
+或是replace
+Router.replace( location )
+與 router.push 行為很類似，差別在於其為替換當前組件，因此跳轉行為 ” 不會被記錄 ”，上一頁下一頁會忽略。使用方式：
+export default {
+  methods: {
+    method(){
+      // 看似跳轉頁面，但其實此操作不會被記錄
+      // 若此時切換至index之類的操作
+      // 再按上一頁並不會回到about組件
+      this.$router.replace('/about')
     }
   }
 }
