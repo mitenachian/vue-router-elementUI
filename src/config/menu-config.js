@@ -16,8 +16,8 @@ module.exports = [{
     id: 'products',
     icon: 'beer',
     sub: [{
-      name: 'Prd1',
-      componentName: 'Prd1',
+      name: 'ToDoList',
+      componentName: 'ToDoList',
       icon: 'coffee',
     }, {
       name: 'Prd2',
