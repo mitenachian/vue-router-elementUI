@@ -14,7 +14,6 @@
           <el-row style="margin-top:10px;">
             <el-button @click="goback">回上頁</el-button>
             <el-button @click="goHome">回到根目錄</el-button>
-            <el-button @click="goReplace">Replace</el-button>
           </el-row>
           <!-- Router 來來去去-->
         </el-main>

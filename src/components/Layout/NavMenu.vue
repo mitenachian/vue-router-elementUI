@@ -1,7 +1,6 @@
 <template>
 	<div>
       <el-menu
-      class=""
       router
       @open="handleOpen"
       @close="handleClose"
@@ -38,10 +37,10 @@
     },
     methods: {
       handleOpen(key, keyPath) {
-        console.log(key, keyPath)
+        // console.log(key, keyPath)
       },
       handleClose(key, keyPath) {
-        console.log(key, keyPath)
+        // console.log(key, keyPath)
       }
     }
   }

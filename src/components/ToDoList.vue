@@ -40,7 +40,7 @@
 </template>
 <script>
 export default {
-  data(){
+data(){
      return {
       list:["學習VueRouter","學習Vuex"],
       todo:'',
@@ -49,20 +49,20 @@ export default {
   },
  methods:{
       addToDo(){
-      	if(!!this.todo){
+      	if(!!this.todo) {
  		this.list.push(this.todo);
  		this.todo ='';
       	}
       },
-      doneToDo(item , index){
+      doneToDo(item , index) {
       	this.listDone.push(item);
       	this.list.splice(index, 1);
       },
-      removeToDo(type , index){
+      removeToDo(type , index) {
       	if(type=="list"){
       		this.list.splice(index,1);
       	}
-      	if(type=="listDone"){
+      	if(type=="listDone") {
       		this.listDone.splice(index,1);
       	}
 
