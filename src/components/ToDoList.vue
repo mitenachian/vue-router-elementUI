@@ -12,7 +12,7 @@
 				   <el-input v-model="todo" width="200px"> </el-input>
     			</el-form-item>
     			<el-form-item>	
-		    		<el-button type="primary" size="mini" circle @click="addToDo"><icon name="plus"></icon></el-button>
+		    		<el-button type="primary" size="mini" circle @click="addToDo()"><icon name="plus"></icon></el-button>
     			</el-form-item>
     		</el-form>
 		</el-col>
@@ -56,7 +56,7 @@ export default {
       listDone:[],
     }
   },
-  method(){
+  methods:{
     addToDo(){
       if(!!this.todo) {
         this.list.push(this.todo);
