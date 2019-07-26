@@ -20,8 +20,8 @@ module.exports = [{
       componentName: 'ToDoList',
       icon: 'edit',
     }, {
-      name: 'prd',
-      componentName: 'Prd',
+      name: 'Table',
+      componentName: 'Table',
       icon: 'coffee',
     }]
   }, {
