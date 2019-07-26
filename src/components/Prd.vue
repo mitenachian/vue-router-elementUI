@@ -1,5 +1,7 @@
 <template>
   <div>
-   Route 2-2 component
+   <el-row>
+     prd
+   </el-row>
   </div>
 </template>

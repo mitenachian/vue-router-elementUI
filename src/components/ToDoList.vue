@@ -20,7 +20,7 @@
     <el-row>
 	    <el-col :span="12">
 	    	<h4>未完成清單</h4>
-		    	<div v-for="(item,index) in list">
+		    	<div v-for="(item,index) in list" :key="index">
 	    			<span> {{ item }} </span>
 	    			<el-button type="success" size="mini" circle @click="doneToDo(item,index)"><icon name="check"></icon></el-button>
 	    			<el-button type="danger" size="mini" circle @click="removeToDo( 'list' ,index)"><icon name="minus"></icon></el-button>
@@ -29,7 +29,7 @@
 		</el-col>
 		<el-col :span="12">
 	    	 <h4>已完成清單</h4>
-	    	 <div v-for="(item,index) in listDone">
+	    	 <div v-for="(item,index) in listDone"  :key="index">
 	    			<span> {{ item }} </span>
 	    			<el-button type="danger" size="mini" circle @click="removeToDo( 'listDone' ,index)"><icon name="minus"></icon></el-button>
 		    		<el-divider></el-divider>

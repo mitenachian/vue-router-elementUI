@@ -3,13 +3,13 @@ module.exports = [{
     id: 'basic',
     icon: 'flag',
     sub: [{
-      name: 'CheckPassword',
+      name: '密碼強度',
       componentName: 'CheckPassword',
-      icon: 'comment',
+      icon: 'lock',
     }, {
       name: 'JSON Render',
       componentName: 'JsonLoad',
-      icon: 'user',
+      icon: 'file',
     }]
   }, {
     name: '產品',
@@ -18,10 +18,10 @@ module.exports = [{
     sub: [{
       name: 'ToDoList',
       componentName: 'ToDoList',
-      icon: 'coffee',
+      icon: 'edit',
     }, {
-      name: 'Prd2',
-      componentName: 'Prd2',
+      name: 'prd',
+      componentName: 'Prd',
       icon: 'coffee',
     }]
   }, {

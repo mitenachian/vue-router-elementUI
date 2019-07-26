@@ -6,21 +6,52 @@ Vue.use(Router)
 
 var routes = [
   {
-		path: '/signin',
-		name: 'signin',
+		path: '/Login',
+		name: 'Login',
 		component: () => import('@/components/Login.vue'),
 		hidden: true,
 	},
 	{
     path: '/',
-    name: 'Home',
-		component: () => import('@/components/Layout/index.vue'),
-	},
+    name: 'Root',
+    redirect: { name: 'Home' },
+    component: () => import('@/components/Layout/index.vue'),
+    children:[
+      {
+        path: '/Home',
+        name: 'Home',
+        component: () => import('@/components/Home.vue'),
+      }, /*{
+        path: 'CheckPassword',
+        name: 'CheckPassword',
+        component: () => import('@/components/CheckPassword.vue'),
+      }, {
+        path: 'JsonLoad',
+        name: 'JsonLoad',
+        component: () => import('@/components/JsonLoad.vue'),
+      }, {
+        path: 'ToDoList',
+        name: 'ToDoList',
+        component: () => import('@/components/ToDoList.vue'),
+      }, {
+        path: 'prd',
+        name: 'ToDoList',
+        component: () => import('@/components/Prd.vue'),
+      }, {
+        path: 'Other1',
+        name: 'Other1',
+        component: () => import('@/components/Other1.vue'),
+      },, {
+        path: 'Other2',
+        name: 'Other2',
+        component: () => import('@/components/Other2.vue'),
+      }, */
+    ]
+  },
 ]
-
 menus.forEach((item) => {
   item.sub.forEach((sub) => {
-    routes.push({
+    routes[1].children.push({
       path: `/${sub.componentName}`,
       name: sub.componentName,
       component: () => import(`@/components/${sub.componentName}`)

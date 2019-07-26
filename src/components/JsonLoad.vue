@@ -34,7 +34,7 @@ export default {
     this.lessons = jsonData;
    /* fetch('./data.json')
       .then( function (res) {
-        console.log(res); // 這裡為什麼傳的東西怪怪的
+        console.log(res);
         res.json();
       })
       .then(lessons => this.lessons =lessons)*/
