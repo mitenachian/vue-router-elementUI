@@ -58,7 +58,7 @@ export default {
   },
   methods:{
     addToDo(){
-      if(!!this.todo) {
+      if(this.todo) {
         this.list.push(this.todo);
         this.todo ='';
       }

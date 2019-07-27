@@ -3,19 +3,10 @@ module.exports = [{
     id: 'basic',
     icon: 'flag',
     sub: [{
-      name: '密碼強度',
-      componentName: 'CheckPassword',
-      icon: 'lock',
-    }, {
       name: 'JSON Render',
       componentName: 'JsonLoad',
       icon: 'file',
-    }]
-  }, {
-    name: '產品',
-    id: 'products',
-    icon: 'beer',
-    sub: [{
+    },{
       name: 'ToDoList',
       componentName: 'ToDoList',
       icon: 'edit',
@@ -23,9 +14,13 @@ module.exports = [{
       name: 'Table',
       componentName: 'Table',
       icon: 'coffee',
+    },{
+      name: '密碼強度',
+      componentName: 'CheckPassword',
+      icon: 'lock',
     }]
   }, {
-    name: '其他',
+    name: '作品',
     id: 'other',
     icon: 'star',
     sub: [{

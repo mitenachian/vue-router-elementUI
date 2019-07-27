@@ -3,7 +3,7 @@
     <el-col :span="24">
         <div class="head-wrap">
             <icon name="brands/vuejs" title="Vue.js"></icon>
-            Vue + Element UI + Vue-Router 練習
+            VueJs + Element UI + Vue-Router + Vuex 練習
             <div class="right-menu">
             <el-dropdown class="avatar-container right-menu-item" trigger="click">
               <div class="avatar-wrapper">
@@ -13,9 +13,9 @@
                 <!-- </el-button> -->
               </div>
               <el-dropdown-menu slot="dropdown">
-                <router-link to="/">
+                <!--<router-link to="/">
                   <el-dropdown-item>設定</el-dropdown-item>
-                </router-link>
+                </router-link>-->
                 <el-dropdown-item divided>
                   <span @click="singOut()">登出</span>
                 </el-dropdown-item>
@@ -30,7 +30,8 @@
 export default {
   methods: {
     singOut(){  
-      this.$router.replace('/Login')
+      this.$router.replace('/Login');
+      // 刪除store中的登入資訊
     }
   },
 }
