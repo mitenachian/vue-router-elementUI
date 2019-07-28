@@ -82,10 +82,11 @@ export default {
       }
     };
   },
-  mounted(){
-   this.$store.user.dispatch('setUserName', this.model.username);
-  },
   methods: {
+    setUser(name){
+      console.log('setUser:' + name); //這裡有
+      this.$store.dispatch('user/setUserName',{name}); // payload傳不進去
+    },
     simulateLogin() {
       return new Promise(resolve => {
         setTimeout(resolve, 800);
@@ -104,6 +105,8 @@ export default {
         this.model.password === this.validCredentials.password
       ) {
         // 這裡需要把登入資料存入state,然後轉跳頁面
+       
+        await this.setUser(this.model.username);
         this.$message.success("Login successfull");
         await this.simulateLogin();
         this.$router.replace('/Home')

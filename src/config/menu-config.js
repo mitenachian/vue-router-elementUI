@@ -24,7 +24,7 @@ module.exports = [{
     id: 'other',
     icon: 'star',
     sub: [{
-      name: 'Other1',
+      name: '作品集',
       componentName: 'Other1',
       icon: 'share',
     }, {
