@@ -28,10 +28,10 @@ export default {
       if(/[0-9]/.test(this.password)) score *= 1.25;
       if(/[^A-Za-z0-9]/.test(this.password)) score *= 1.25;
 
-      if(score > 40) return '太完美了!';
-      if(score > 20) return '很棒!';
-      if(score > 10) return '好!';
-      return '這密碼太弱了喔';
+      if(score > 40) return 'Perfect!';
+      if(score > 20) return 'Great!';
+      if(score > 10) return 'Good!';
+      return 'Weak!';
     },
   },
 }

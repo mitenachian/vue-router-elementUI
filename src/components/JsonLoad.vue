@@ -4,7 +4,12 @@
       <h3>JSON DATA Render</h3>
     </el-row>
     <el-row>
-        <div class="lesson" v-for="(lesson, index) in lessons" :key="index">
+      <el-col :span="12">
+        <el-input v-model="serchText" placeholder="seach lesson title"></el-input>
+      </el-col>
+    </el-row>
+    <el-row>
+        <div class="lesson" v-for="(lesson, index) in filteredList" :key="index">
             <div class="image" :style="imgStyle(lesson.img)"></div>
             <a v-bind:href="lesson.url" target="_blank">
                 <h1>{{lesson.title}}</h1>
@@ -20,6 +25,7 @@ import jsonData from './data.json'
 export default {
   data(){
      return {
+      serchText:'',
       lessons:[],
      }
    },
@@ -38,6 +44,13 @@ export default {
         res.json();
       })
       .then(lessons => this.lessons =lessons)*/
+  },  
+  computed: {
+    filteredList() {
+      return this.lessons.filter(lesson => {
+        return lesson.title.toLowerCase().includes(this.serchText.toLowerCase())
+      })
+    }
   },
 }
 </script>
@@ -57,7 +70,7 @@ export default {
         position: relative;
         display:inline-block;
         width:240px;
-        border:1px solid gray;
+        border:1px solid #999;
         margin:12px;
         padding:8px;
         overflow: hidden;
