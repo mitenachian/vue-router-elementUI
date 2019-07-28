@@ -20,7 +20,7 @@ module.exports = [{
       icon: 'lock',
     }]
   }, {
-    name: '作品',
+    name: '其他',
     id: 'other',
     icon: 'star',
     sub: [{

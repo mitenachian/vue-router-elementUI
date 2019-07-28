@@ -1,7 +1,7 @@
 <template>
 <div>
     <el-row>
-      <h3>JSON DATA Render</h3>
+      <h3>JSON DATA Render and Search Filter</h3>
     </el-row>
     <el-row>
       <el-col :span="12">
