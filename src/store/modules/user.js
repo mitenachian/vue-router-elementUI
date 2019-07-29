@@ -1,7 +1,7 @@
 import * as types from '../mutations-types'
 
 const state = {
-  LoginUserName: 'store-default',
+  LoginUserName: 'default-Name',
 }
 
 const actions = {
