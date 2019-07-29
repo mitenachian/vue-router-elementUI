@@ -84,8 +84,8 @@ export default {
   },
   methods: {
     setUser(name){
-      console.log('setUser:' + name); //這裡有OK
-      this.$store.dispatch('user/setUserName',name); //這裡的name傳不過去
+      console.log('setUser:' + name);
+      this.$store.dispatch('user/setUserName',name);
     },
     simulateLogin() {
       return new Promise(resolve => {
@@ -105,8 +105,8 @@ export default {
         this.model.password === this.validCredentials.password
       ) {
         // 這裡需要把登入資料存入state,然後轉跳頁面
-        // this.$store.dispatch('user/setUserName', this.model.username); 
-        await this.setUser(this.model.username);
+        this.$store.dispatch('user/setUserName', this.model.username); 
+        // await this.setUser(this.model.username);
         this.$message.success("Login successfull");
         await this.simulateLogin();
         this.$router.replace('/Home')

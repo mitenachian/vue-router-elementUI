@@ -1,11 +1,11 @@
 import * as types from '../mutations-types'
 
 const state = {
-  LoginUserName: 'store-default',
+  LoginUserName: '',
 }
 
 const actions = {
-  setUserName ({ commit, payload }) {
+  setUserName ({ commit }, payload) {
     commit(types.SET_USER, payload)
   },
   clearUserName ({ commit }) {
