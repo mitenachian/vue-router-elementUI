@@ -9,9 +9,9 @@
     	<el-col :span="24">
     		<el-form :inline="true" ref="form">
     			<el-form-item label="新增待辦">
-				   <el-input v-model="todo" width="200px"> </el-input>
+				   <el-input v-model="todo" width="200px"></el-input>
     			</el-form-item>
-    			<el-form-item>	
+    			<el-form-item>
 		    		<el-button type="primary" size="mini" circle @click="addToDo()"><icon name="plus"></icon></el-button>
     			</el-form-item>
     		</el-form>

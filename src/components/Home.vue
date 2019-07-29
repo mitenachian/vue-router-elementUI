@@ -15,7 +15,6 @@ export default {
   },
   mounted(){
     this.name = this.$store.state.user.LoginUserName;
-    console.log("store中的LoginUserName=>" +  this.name);
   }
 }
 </script>

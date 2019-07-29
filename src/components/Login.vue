@@ -83,10 +83,6 @@ export default {
     };
   },
   methods: {
-    setUser(name){
-      console.log('setUser:' + name);
-      this.$store.dispatch('user/setUserName',name);
-    },
     simulateLogin() {
       return new Promise(resolve => {
         setTimeout(resolve, 800);
