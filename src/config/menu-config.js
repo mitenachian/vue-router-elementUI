@@ -18,6 +18,10 @@ module.exports = [{
       name: '密碼強度',
       componentName: 'CheckPassword',
       icon: 'lock',
+    },{
+      name: 'Callback & Promise',
+      componentName: 'callbackPromise',
+      icon: 'star',
     }]
   }, {
     name: '其他',
