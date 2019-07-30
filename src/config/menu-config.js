@@ -31,8 +31,13 @@ module.exports = [{
       name: '作品集',
       componentName: 'Other1',
       icon: 'share',
-    }, {
-      name: 'Other2',
+    }]
+  }, {
+    name: 'CSS',
+    id: 'css',
+    icon: 'leaf',
+    sub: [{
+      name: 'CSS-Flex',
       componentName: 'Other2',
       icon: 'edit',
     }]
