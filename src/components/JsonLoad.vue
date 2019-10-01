@@ -44,7 +44,7 @@ export default {
         res.json();
       })
       .then(lessons => this.lessons =lessons)*/
-  },  
+  },
   computed: {
     filteredList() {
       return this.lessons.filter(lesson => {
