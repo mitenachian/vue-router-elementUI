@@ -2,7 +2,7 @@
 //     publicPath: '/vue-router-elementUI/'
 // }
 module.exports = {
-  publicPath: '/vue-mitena-demo/'
+  publicPath: './'
 }
 // module.exports = {
 //     publicPath: process.env.NODE_ENV === 'production'

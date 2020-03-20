@@ -59,7 +59,7 @@ menus.forEach((item) => {
   })
 })
 
-export default new Router({ mode: 'history', routes })
+export default new Router({ mode: 'hash', routes })
 
 /*
 hash 模式 ( 預設 )

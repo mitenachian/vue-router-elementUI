@@ -57,7 +57,7 @@ export default {
       },{
 				id:6,
 				name:"Wedding Easy", 
-				link:"https://github.com/mitenachian/wedding-easy",
+				link:"https://mitenachian.github.io/wedding-easy",
 				img:"https://github.com/mitenachian/wedding-easy/raw/master/wedding-easy.jpg?raw=true",
 				note:"購物車 結帳 訂單 線上課程練習",
       },{
