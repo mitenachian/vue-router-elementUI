@@ -3,7 +3,7 @@
     <el-col :span="24">
         <div class="head-wrap">
             <icon name="brands/vuejs" title="Vue.js"></icon>
-            VueJs + Element UI + Vue-Router + Vuex 練習
+            Mitena
             <div class="right-menu">
             <el-dropdown class="avatar-container right-menu-item" trigger="click">
               <div class="avatar-wrapper">

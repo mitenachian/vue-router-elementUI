@@ -1,7 +1,7 @@
 <template>
   <div>
     <el-alert type="success"  show-icon>
-      HELLO!! 登入USER: {{ name }}
+      HELLO!! 登入中 {{ name }}
     </el-alert>
   </div>
 </template>

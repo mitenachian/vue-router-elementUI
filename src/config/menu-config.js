@@ -1,4 +1,13 @@
 module.exports = [{
+    name: '作品',
+    id: 'other',
+    icon: 'star',
+    sub: [{
+      name: '作品集',
+      componentName: 'Other1',
+      icon: 'share',
+    }]
+  },{
     name: '基本',
     id: 'basic',
     icon: 'flag',
@@ -23,16 +32,8 @@ module.exports = [{
       componentName: 'callbackPromise',
       icon: 'star',
     }]
-  }, {
-    name: '其他',
-    id: 'other',
-    icon: 'star',
-    sub: [{
-      name: '作品集',
-      componentName: 'Other1',
-      icon: 'share',
-    }]
-  }, {
+  }]
+  /*, {
     name: 'CSS',
     id: 'css',
     icon: 'leaf',
@@ -41,4 +42,4 @@ module.exports = [{
       componentName: 'Other2',
       icon: 'edit',
     }]
-  }]
+  } */
