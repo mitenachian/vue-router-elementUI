@@ -18,7 +18,7 @@
           <!-- Router 來來去去-->
         </el-main>
       </el-container>
-      <el-footer>Practice only © 2019 Mitena / VueJs + Element UI + Vue-Router + Vuex 練習</el-footer>
+      <el-footer>Practice only © 2019 <a href="https://www.blink.com.tw/blink_resume/official/193379a811/" target="_blank">Mitena</a> / VueJs + Element UI + Vue-Router + Vuex 練習</el-footer>
     </el-container>
   </div>
 </template>
