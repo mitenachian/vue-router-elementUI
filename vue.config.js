@@ -1,5 +1,8 @@
+// module.exports = {
+//     publicPath: '/vue-router-elementUI/'
+// }
 module.exports = {
-    publicPath: '/vue-router-elementUI/'
+  baseUrl: './'
 }
 // module.exports = {
 //     publicPath: process.env.NODE_ENV === 'production'
